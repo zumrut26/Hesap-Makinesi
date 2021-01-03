@@ -1,49 +1,35 @@
-.sil-tusu { grid-area: sil-tusu; }
-.bolu-tusu { grid-area: bolu-tusu; }
-.carpi-tusu { grid-area: carpi-tusu; }
-.eksi-tusu { grid-area: eksi-tusu; }
-.arti-tusu { grid-area: arti-tusu; }
-.esittir-tusu { grid-area: esittir-tusu; }
-.nokta-tusu { grid-area: nokta-tusu; }
-.dokuz-numara { grid-area: dokuz-numara; }
-.sekiz-numara { grid-area: sekiz-numara; }
-.yedi-numara { grid-area: yedi-numara; }
-.alti-numara { grid-area: alti-numara; }
-.bes-numara { grid-area: bes-numara; }
-.dort-numara { grid-area: dort-numara; }
-.uc-numara { grid-area: uc-numara; }
-.iki-numara { grid-area: iki-numara; }
-.bir-numara { grid-area: bir-numara; }
-.sifir-numara { grid-area: sifir-numara; }
-
-
-
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'sil-tusu sil-tusu bolu-tusu carpi-tusu'
-    'sil-tusu sil-tusu bolu-tusu carpi-tusu'
-    'yedi-numara sekiz-numara dokuz-numara eksi-tusu'
-    'yedi-numara sekiz-numara dokuz-numara eksi-tusu'
-    'yedi-numara sekiz-numara dokuz-numara eksi-tusu'
-    'dort-numara bes-numara alti-numara arti-tusu'
-    'dort-numara bes-numara alti-numara arti-tusu'
-    'dort-numara bes-numara alti-numara arti-tusu'
-    'bir-numara iki-numara uc-numara esittir-tusu'
-    'bir-numara iki-numara uc-numara esittir-tusu'
-    'bir-numara iki-numara uc-numara esittir-tusu'
-    'sifir-numara sifir-numara nokta-tusu esittir-tusu'
-    'sifir-numara sifir-numara nokta-tusu esittir-tusu'
-    'sifir-numara sifir-numara nokta-tusu esittir-tusu'
-    ;
-  background-color: #2196F3;
-  padding: 10px;
-  width: 200px;
-  height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid;
+  width: 140px;
+  height: 220px;
+  align-items: center;
+  justify-content: center;
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-size: 30px;
+.grid-container div input {
+  width: 120px;
+  margin: 5px;
 }
+
+.grid-container .keys {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: start;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.grid-container .keys button.sil-tusu.satir-1 , .grid-container .keys button.sifir-numara {
+  width: 58px;
+}
+
+.grid-container .keys button.esittir-tusu {
+  height: 55px;
+  position: absolute;
+  margin-top: -22px;
+  margin-left: 8px;
+}
+
+
